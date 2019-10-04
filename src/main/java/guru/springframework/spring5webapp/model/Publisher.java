@@ -11,6 +11,17 @@ public class Publisher {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    private String address;
+
     @OneToMany(mappedBy = "publisher")
     private Set<Book> books = new HashSet<>();
 

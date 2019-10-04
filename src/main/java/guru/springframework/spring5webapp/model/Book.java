@@ -32,6 +32,8 @@ public class Book {
     public Book(String title, String isbn, Publisher publisher, Set<Author> authors) {
         this.title = title;
         this.isbn = isbn;
+        //Add to publisher
+        publisher.getBooks().add(this);
         this.publisher = publisher;
         this.authors = authors;
     }
